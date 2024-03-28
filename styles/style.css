@@ -1,0 +1,66 @@
+@charset "UTF-8";
+/**/
+* { /* Reset total*/
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/**/
+html, body {
+    height: 100vh;/* Altura total*/
+    width: 100vw;/* largura total*/
+    background-color: black; /* fundo*/
+}
+
+body {
+    background: url(../imagens/fundo-madeira.jpg)no-repeat top center;
+    background-size: cover;/*a imagem é redimensionada para que toda a área do elemento seja coberta pela imagem de fundo, */
+    background-attachment: fixed;/* a imagem de fundo permanece fixa em relação à janela de visualização do navegador. */
+}
+
+main {
+    height: 100vh;/*altura do main*/
+    position: relative;/*ele mantém o espaço reservado para o elemento no layout, mas permite que você o mova ligeiramente em relação a essa posição original*/
+    /*background-color: green;*/
+}
+
+/*configurações do celular*/
+section#telefone {
+    position: absolute;/*remove o elemento do fluxo normal do documento e o posiciona com base nas coordenadas fornecidas pelas propriedades top, right, bottom e left, em relação ao contêiner posicionado mais próximo.*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);/*é usada para mover um elemento em relação a sua posição atual, sem afetar o layout de outros elementos ao seu redor*/
+
+    height: 627px;
+    width: 311px;
+    /*background-color: blue;*/
+    background: url(../imagens/frame-iphone.png)no-repeat;
+}
+
+iframe#tela {
+    position: relative;
+    top: 80px;
+    left: 22px;
+    width: 266px;
+    height: 471px;
+}
+
+section#redes-sociais {
+    text-align: right;
+}
+
+section#redes-sociais img {
+    width: 50px;
+    margin: 10px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.455);
+
+}
+
+section#redes-sociais img:hover {
+    border: 2px solid rgba(255, 255, 255, 0.638);
+    transform: translate(-3px, -3px);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.623);
+    transition: transform .3s, border 1s;
+}
